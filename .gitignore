@@ -1,0 +1,57 @@
+# Build artifacts
+build/
+cmake-build-*/
+out/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+*.cmake
+
+# Compiled output
+*.o
+*.a
+*.so
+*.so.*
+*.dylib
+*.exe
+*.out
+
+# CUDA
+*.fatbin
+*.cubin
+*.ptx
+
+# Benchmark output (generated at runtime)
+*.csv
+*.png
+benchmark_results.csv
+benchmark_plot.png
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Editor / IDE
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.clangd/
+.cache/
+
+# Secrets / credentials (never commit these)
+.env
+.env.*
+*.pem
+*.key
+*.secret
+
+# Dependency fetch cache
+_deps/
+vcpkg_installed/

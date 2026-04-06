@@ -1,0 +1,19 @@
+{
+  "scheduler": {
+    "gpu_launch_threshold":              8192,
+    "transfer_compute_ratio_threshold":  0.5,
+    "memory_bound_intensity_threshold":  2.0,
+    "deferred_batch_target":             64,
+    "allow_deferred_for_latency_sensitive": false
+  },
+  "runtime": {
+    "enable_profiling": true,
+    "verify_results":   true
+  },
+  "notes": {
+    "gpu_launch_threshold":             "Min elements to justify a GPU kernel launch",
+    "transfer_compute_ratio_threshold": "If estimated_transfer / estimated_compute > this, prefer CPU or deferred",
+    "memory_bound_intensity_threshold": "FLOP/byte below which a task is classified as memory-bound",
+    "deferred_batch_target":            "Tasks to accumulate before GPU batch dispatch"
+  }
+}

@@ -8,7 +8,9 @@ namespace acr {
 Runtime::Runtime(RuntimeConfig cfg)
     : cfg_(std::move(cfg)),
       scheduler_(cfg_.scheduler),
-      gpu_exec_(mm_) {}
+      gpu_exec_(mm_) {
+    FeatureExtractor::detect_hardware();
+}
 
 ExecutionResult Runtime::submit(WorkloadDescriptor wd) {
     FeatureExtractor::extract(wd);
